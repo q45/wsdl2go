@@ -234,12 +234,12 @@ func (e *HTTPError) Error() string {
 
 // Envelope is a SOAP envelope.
 type Envelope struct {
-	XMLName      xml.Name `xml:"SOAP-ENV:Envelope"`
-	EnvelopeAttr string   `xml:"xmlns:SOAP-ENV,attr"`
+	XMLName      xml.Name `xml:"soapenv:Envelope"`
+	EnvelopeAttr string   `xml:"xmlns:soapenv,attr"`
 	NSAttr       string   `xml:"xmlns:ns,attr"`
 	TNSAttr      string   `xml:"xmlns:tns,attr,omitempty"`
 	URNAttr      string   `xml:"xmlns:urn,attr,omitempty"`
 	XSIAttr      string   `xml:"xmlns:xsi,attr,omitempty"`
-	Header       Message  `xml:"SOAP-ENV:Header"`
-	Body         Message  `xml:"SOAP-ENV:Body"`
+	Header       Message  `xml:"soapenv:Header"`
+	Body         Message  `xml:"soapenv:Body"`
 }
